@@ -5,12 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Route ,BrowserRouter} from 'react-router-dom'
 import Auth from './components/auth';
+import TicketDetail from './components/TicketDetail';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
        <Route exact  path='/' component={Auth}></Route>
        <Route path='/tickets' component={App}></Route>
+       <Route path='/ticketdetail/:id' component={TicketDetail}></Route>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
